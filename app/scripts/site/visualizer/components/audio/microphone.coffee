@@ -3,7 +3,6 @@ class Microphone
   print:true
   count:0
 
-
   constructor: ->
     @context = new (window.AudioContext || window.webkitAudioContext)()
     navigator.getUserMedia = (navigator.getUserMedia ||  navigator.webkitGetUserMedia ||navigator.mozGetUserMedia || navigator.msGetUserMedia)

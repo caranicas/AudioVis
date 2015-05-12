@@ -2,26 +2,26 @@
 Backbone   = require 'backbone'
 Backbone.$ = require 'jquery'
 Router =  require './router'
-
-demoClass = require './gl/demos/audioShaderDemo.coffee'
-GlView =  require './gl/view'
-
-#Demos = require './demos'
+IndexView = require './form/indexView'
+GlView =  require './visualizer/view'
+InfoMod = require './visInfo'
 
 class App
 
-  isDebugging:true
-
+  isDebugging:false
   constructor: ->
-    #@demos = new Demos()
-    @router = new Router()
+    @Info = new InfoMod()
+    @router = Backbone.router = new Router()
     @__routeHandlers()
     Backbone.history.start()
 
   __routeHandlers: ->
     @router.on 'route:index', @appIndex
+    @router.on 'route:play', @appPlay
 
   appIndex: =>
-    View = new GlView(el: 'body', demo:new demoClass({debug:@isDebugging}))
+    View = new IndexView(el: 'body', model:@Info)
+  appPlay: =>
+    View = new GlView(el: 'body', debug:@isDebugging, model:@Info)
 
 app = new App()

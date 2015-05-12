@@ -6,11 +6,11 @@
     "backbone": "~1.1.2",
     "jquery": "~2.1.0",
     "threejs": "latest",
-    "physijs": "latest",
-    "goblinphysics":"latest",
     "orbitcontrols": "https://github.com/caranicas/ThreeJS-Controls.git#orbitcontrols",
-    "dotscreenshader": "https://github.com/caranicas/ThreeJS-Shaders.git#dotscreenshader",
-    "stats": "https://github.com/mrdoob/stats.js.git"
+    "stats": "https://github.com/mrdoob/stats.js.git",
+    "horizontalblur": "https://github.com/caranicas/ThreeJS-Shaders.git#horizontalblurshader",
+    "verticalblur": "https://github.com/caranicas/ThreeJS-Shaders.git#verticalblurshader"
+
   },
   "resolutions": {
     "threejs": "74e7d09c26"
