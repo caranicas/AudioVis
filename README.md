@@ -1,3 +1,3 @@
-# WebGl-Demos
+# Audio Vis
 
-- A series of Demos using WebGL
+- WebGL Audio Visualizations
